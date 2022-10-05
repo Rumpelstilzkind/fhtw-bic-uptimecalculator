@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UptimeController {
-    @GetMapping("/uptime")
+    @GetMapping("/uptime/minutes")
     public double calculateUptimeMinutes(@RequestParam double relative) {
         double minutesOfMonth = 60*24*30;
         double defineUptimeInPercent = relative /100;
-        return minutesOfMonth * defineUptimeInPercent; //uptiime in minutes
+        return minutesOfMonth * defineUptimeInPercent; //uptime in minutes
     }
 
     @GetMapping("/uptime/hours")
