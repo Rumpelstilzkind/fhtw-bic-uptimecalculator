@@ -8,18 +8,18 @@ class UptimeControllerTest {
 
     @Test
     void calculateUptimeMinutes() {
-        //A - Arrange (vorbereiten d.h. eine Instanz der Klasse anlegen die ich testen möchte)
-        var controller = new UptimeController();
+        // A - Arrange
+        UptimeController controller = new UptimeController();
 
-        //A - Act (Test ausführen, d.h. die Methode mit Testdaten ausführen)
+        // A - Act
         var result = controller.calculateUptimeMinutes(0.0);
 
-        //A - Assert (Vergleichen, ob das Ergebnis der Erwartung entspricht)
-        assertEquals(0.0, result); //Message kann optional angegeben werden
+        // A - Assert
+        assertEquals(0.0, result);
     }
 
     @Test
     void calculateUptimeHours() {
-        //assertEquals(1,0);
     }
+
 }
